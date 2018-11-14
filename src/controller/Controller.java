@@ -15,7 +15,6 @@ public class Controller
 	
 	public void start()
 	{
-		int ml = -99;
 		
 		String userInput = JOptionPane.showInputDialog(null, "What color is your Water Bottle?");
 		userBottle.setColor(userInput);
@@ -24,17 +23,11 @@ public class Controller
 		while(!validInt(userInput))
 		{
 		userInput = JOptionPane.showInputDialog(null, "How much water can your bottle hold in ml? (Type a whole number)");
-		
-		if (validInt(userInput))
-		{
-			 ml = Integer.parseInt(userInput);
 		}
+		userBottle.setCanHold(Integer.parseInt(userInput));
 		
-		}
-		userBottle.setCanHold(ml);
-		
-		userInput = JOptionPane.showInputDialog(null, "Does your watter bottle has a straw? (True, Flase)");
-		if(userInput.contains("True") || userInput.contains("true"))
+		userInput = JOptionPane.showInputDialog(null, "Does your watter bottle have a straw?");
+		if(userInput.contains("true") || userInput.contains("True"))
 		{
 			userBottle.setHasStraw(true);
 		}
