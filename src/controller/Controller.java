@@ -6,6 +6,7 @@ public class Controller
 {
 	private WaterBottle userBottle;
 	private WaterBottle myBottle;
+	private WaterBottle[] arrayBottle;
 	
 	public Controller()
 	{	
@@ -20,6 +21,24 @@ public class Controller
 		questions();
 		
 		
+		
+	}
+	
+	public void watterArrays()
+	{
+		
+		for(int index = 0; index < arrayBottle.length; index += 1)
+		{
+			if(index % 2 == 0)
+			{
+				arrayBottle[index] = new WaterBottle();
+			}
+			else
+			{
+				arrayBottle[index] = new WaterBottle();
+			}
+			
+		}
 		
 	}
 	
