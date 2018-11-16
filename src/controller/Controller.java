@@ -5,17 +5,26 @@ import javax.swing.JOptionPane;
 public class Controller
 {
 	private WaterBottle userBottle;
+	private WaterBottle myBottle;
 	
 	public Controller()
 	{	
 		
 		userBottle = new WaterBottle();
-	
+		myBottle = new WaterBottle(true, 750, "Blue");
+		WaterBottle[] arrayBottle = new WaterBottle[5];
 	}
 	
 	public void start()
 	{
+		questions();
 		
+		
+		
+	}
+	
+	public void questions()
+	{
 		String userInput = JOptionPane.showInputDialog(null, "What color is your Water Bottle?");
 		userBottle.setColor(userInput);
 		
@@ -40,10 +49,7 @@ public class Controller
 										+ "\nColor: " + userBottle.getColor() 
 										+ "\nHow much liquid it can hold: " + userBottle.getCanHold() + " ml"
 										+ "\nDoes the bottle have a straw: " + userBottle.getHasStraw());
-		
 	}
-	
-	
 	
 	public boolean validInt(String maybeInt)
 	{

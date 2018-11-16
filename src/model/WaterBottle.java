@@ -13,6 +13,12 @@ public class WaterBottle
 		canHold = -99;
 		color = "beep";
 	}
+	public WaterBottle(boolean hasStraw, int canHold, String color)
+	{
+		this.hasStraw = hasStraw;
+		this.canHold = canHold;
+		this.color = color;
+	}
 	
 	public void setHasStraw(boolean hasStraw)
 	{
